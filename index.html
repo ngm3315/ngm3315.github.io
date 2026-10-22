@@ -2,10 +2,131 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Noh Ki Moon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noh Ki-Moon</title>
+    <style>
+        body { 
+            font-family: 'Pretendard', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: #fcfcfc;
+        }
+        header { 
+            text-align: center; 
+            padding: 50px 0 30px 0; 
+            border-bottom: 2px solid #eaeaea; 
+        }
+        h1 { 
+            margin-bottom: 10px; 
+            color: #2c3e50; 
+            font-size: 2.5em;
+        }
+        h2 { 
+            color: #34495e; 
+            margin-top: 40px; 
+            border-bottom: 2px solid #3498db; 
+            display: inline-block;
+            padding-bottom: 5px; 
+        }
+        .subtitle { 
+            color: #7f8c8d; 
+            font-size: 1.2em; 
+            margin-bottom: 20px;
+        }
+        .contact-links a {
+            margin: 0 10px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+        .section { 
+            margin-bottom: 40px; 
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        ul { 
+            list-style-type: none; 
+            padding-left: 0; 
+        }
+        li { 
+            margin-bottom: 12px; 
+            position: relative;
+            padding-left: 20px;
+        }
+        li:before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        strong {
+            color: #2c3e50;
+        }
+        footer { 
+            text-align: center; 
+            margin-top: 50px; 
+            padding-top: 20px; 
+            border-top: 1px solid #eaeaea; 
+            color: #95a5a6; 
+            font-size: 0.9em; 
+        }
+    </style>
 </head>
 <body>
-    <h1>안녕하세요! 제 GitHub Pages입니다.</h1>
-    <p>본격적으로 포트폴리오를 만들어보겠습니다.</p>
+    <header>
+        <h1>노기문</h1>
+        <p class="subtitle">광운대학교 컴퓨터정보공학부</p>
+        <div class="contact-links">
+            <a href="https://github.com/ngm3315" target="_blank">GitHub (ngm3315)</a>
+            <a href="mailto:your.email@example.com">Email</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>About Me</h2>
+            <p>안녕하세요! 다양한 언어와 환경에서 소프트웨어 개발을 탐구하고 있는 컴퓨터정보공학부 2학년 학생입니다. 효율적인 자료구조와 객체지향 설계(OOP)에 관심이 많으며, 마크다운(Markdown)을 활용한 체계적인 문서화와 코드 품질 개선을 중요하게 생각합니다.</p>
+        </div>
+
+        <div class="section">
+            <h2>Tech Skills</h2>
+            <ul>
+                <li><strong>Languages:</strong> C, C++, Python, VBScript</li>
+                <li><strong>Environment & Tools:</strong> Linux Shell, Git/GitHub</li>
+                <li><strong>Core Knowledge:</strong> Data Structures, Object-Oriented Programming (OOP)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Projects & Activities</h2>
+            <ul>
+                <li><strong>Bank Management System:</strong> C++를 활용하여 클래스 상속 및 동적 메모리 관리가 적용된 객체지향 기반 콘솔 은행 관리 시스템 개발</li>
+                <li><strong>국방 AI경진대회 준비:</strong> Python 기반 데이터 분석 및 자율주행 차선 인식을 위한 컴퓨터 비전(Bird's-eye view 변환 등) 알고리즘 연구</li>
+                <li><strong>Algorithms & Data Structures:</strong> 동적 배열 조작, 나선형 행렬 생성 등 C/C++ 기반 핵심 알고리즘 구현</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Other Interests</h2>
+            <ul>
+                <li>GitHub 프로필 디자인 및 프로젝트 README.md 체계적 관리</li>
+                <li>문학적 표현을 다듬고 은유를 활용하는 시 창작 (ex. '산타클로스')</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 노기문. All rights reserved. | Hosted on GitHub Pages</p>
+    </footer>
 </body>
 </html>
