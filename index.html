@@ -3,130 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noh Ki-Moon</title>
+    <title>노기문 | Portfolio</title>
     <style>
+        :root {
+            --bg-color: #fcfcfc;
+            --card-bg: #ffffff;
+            --primary-color: #3498db;
+            --text-main: #2c3e50;
+            --text-sub: #555555;
+            --text-muted: #7f8c8d;
+            --border-color: #eaeaea;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body { 
-            font-family: 'Pretendard', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.6; 
-            color: #333; 
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', Apple SD Gothic Neo, 'Noto Sans KR', 'Malgun Gothic', sans-serif; 
+            line-height: 1.7; 
+            color: var(--text-sub); 
             max-width: 800px; 
             margin: 0 auto; 
             padding: 20px; 
-            background-color: #fcfcfc;
+            background-color: var(--bg-color);
         }
+
         header { 
             text-align: center; 
             padding: 50px 0 30px 0; 
-            border-bottom: 2px solid #eaeaea; 
+            border-bottom: 2px solid var(--border-color); 
         }
+
+        /* 프로필 이미지 스타일 추가 */
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
         h1 { 
-            margin-bottom: 10px; 
-            color: #2c3e50; 
-            font-size: 2.5em;
+            margin: 0 0 8px 0; 
+            color: var(--text-main); 
+            font-size: 2.4em;
+            letter-spacing: -0.5px;
         }
-        h2 { 
-            color: #34495e; 
-            margin-top: 40px; 
-            border-bottom: 2px solid #3498db; 
-            display: inline-block;
-            padding-bottom: 5px; 
-        }
+
         .subtitle { 
-            color: #7f8c8d; 
-            font-size: 1.2em; 
+            color: var(--text-muted); 
+            font-size: 1.15em; 
             margin-bottom: 20px;
+            font-weight: 500;
         }
+
         .contact-links a {
-            margin: 0 10px;
-            color: #3498db;
+            margin: 0 8px;
+            color: var(--primary-color);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            transition: color 0.2s ease;
         }
+
         .contact-links a:hover {
+            color: #1d6fa5;
             text-decoration: underline;
         }
-        .section { 
-            margin-bottom: 40px; 
-            background: #fff;
-            padding: 20px 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+
+        section { 
+            margin-top: 30px; 
+            background: var(--card-bg);
+            padding: 24px 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
+
+        section:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        h2 { 
+            color: var(--text-main); 
+            margin-top: 0;
+            margin-bottom: 16px; 
+            border-bottom: 3px solid var(--primary-color); 
+            display: inline-block;
+            padding-bottom: 4px; 
+            font-size: 1.4em;
+        }
+
         ul { 
             list-style-type: none; 
             padding-left: 0; 
+            margin: 0;
         }
+
         li { 
             margin-bottom: 12px; 
             position: relative;
             padding-left: 20px;
         }
-        li:before {
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+
+        li::before {
             content: "•";
-            color: #3498db;
+            color: var(--primary-color);
             font-weight: bold;
             display: inline-block;
             width: 1em;
             margin-left: -1em;
         }
+
         strong {
-            color: #2c3e50;
+            color: var(--text-main);
         }
+
+        /* Skills Tag Style */
+        .skills-group {
+            margin-bottom: 16px;
+        }
+
+        .skills-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .skills-title {
+            font-weight: bold;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: #f0f7fc;
+            color: #2980b9;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+            border: 1px solid #d4e6f1;
+        }
+
         footer { 
             text-align: center; 
             margin-top: 50px; 
             padding-top: 20px; 
-            border-top: 1px solid #eaeaea; 
-            color: #95a5a6; 
-            font-size: 0.9em; 
+            border-top: 1px solid var(--border-color); 
+            color: var(--text-muted); 
+            font-size: 0.85em; 
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            section {
+                padding: 20px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+            
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
+        <!-- 원형 프로필 이미지 추가 -->
+        <!-- profile.jpg 대신 본인 사진 파일 이름(예: myphoto.png)으로 대체하셔도 됩니다 -->
+        <img src="profile.jpg" alt="노기문 프로필 사진" class="profile-img">
+        
         <h1>노기문</h1>
         <p class="subtitle">광운대학교 컴퓨터정보공학부</p>
-        <div class="contact-links">
-            <a href="https://github.com/ngm3315" target="_blank">GitHub (ngm3315)</a>
+        <nav class="contact-links">
+            <a href="https://github.com/ngm3315" target="_blank" rel="noopener noreferrer">GitHub (ngm3315)</a>
             <a href="mailto:your.email@example.com">Email</a>
-        </div>
+        </nav>
     </header>
 
     <main>
-        <div class="section">
+        <section>
             <h2>About Me</h2>
             <p>안녕하세요! 다양한 언어와 환경에서 소프트웨어 개발을 탐구하고 있는 컴퓨터정보공학부 2학년 학생입니다. 효율적인 자료구조와 객체지향 설계(OOP)에 관심이 많으며, 마크다운(Markdown)을 활용한 체계적인 문서화와 코드 품질 개선을 중요하게 생각합니다.</p>
-        </div>
+        </section>
 
-        <div class="section">
+        <section>
             <h2>Tech Skills</h2>
-            <ul>
-                <li><strong>Languages:</strong> C, C++, Python, VBScript</li>
-                <li><strong>Environment & Tools:</strong> Linux Shell, Git/GitHub</li>
-                <li><strong>Core Knowledge:</strong> Data Structures, Object-Oriented Programming (OOP)</li>
-            </ul>
-        </div>
+            <div class="skills-group">
+                <div class="skills-title">Languages</div>
+                <div class="tag-container">
+                    <span class="tag">C</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">VBScript</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-title">Environment & Tools</div>
+                <div class="tag-container">
+                    <span class="tag">Linux Shell</span>
+                    <span class="tag">Git / GitHub</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-title">Core Knowledge</div>
+                <div class="tag-container">
+                    <span class="tag">Data Structures</span>
+                    <span class="tag">OOP</span>
+                </div>
+            </div>
+        </section>
 
-        <div class="section">
+        <section>
             <h2>Projects & Activities</h2>
             <ul>
                 <li><strong>Bank Management System:</strong> C++를 활용하여 클래스 상속 및 동적 메모리 관리가 적용된 객체지향 기반 콘솔 은행 관리 시스템 개발</li>
                 <li><strong>국방 AI경진대회 준비:</strong> Python 기반 데이터 분석 및 자율주행 차선 인식을 위한 컴퓨터 비전(Bird's-eye view 변환 등) 알고리즘 연구</li>
                 <li><strong>Algorithms & Data Structures:</strong> 동적 배열 조작, 나선형 행렬 생성 등 C/C++ 기반 핵심 알고리즘 구현</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="section">
+        <section>
             <h2>Other Interests</h2>
             <ul>
                 <li>GitHub 프로필 디자인 및 프로젝트 README.md 체계적 관리</li>
                 <li>문학적 표현을 다듬고 은유를 활용하는 시 창작 (ex. '산타클로스')</li>
             </ul>
-        </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 노기문. All rights reserved.</p>
+        <p>&copy; 2026 노기문. All rights reserved. | Hosted on GitHub Pages</p>
     </footer>
 </body>
 </html>
